@@ -1,0 +1,56 @@
+# Node modules
+node_modules/
+
+# Build output
+.next/
+out/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+prisma/*.sqlite
+
+# VSCode
+.vscode/
+
+# Public user uploads (if any)
+public/uploads/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Misc
+*.log
+
+# Ignore next types
+.next/types/
+
+# Ignore generated client
+prisma/client.js
+prisma/client/
+
+# Ignore shadcn/ui temp files
+components.json
+
+# Ignore package lock files (optional, if using only one lock file)
+# package-lock.json
+yarn.lock
+pnpm-lock.yaml 

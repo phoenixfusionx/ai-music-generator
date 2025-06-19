@@ -5,7 +5,7 @@ import { CookieJar } from "tough-cookie";
 import UserAgent from "user-agents";
 
 export interface AudioInfo {
-  id: string; // Unique identifier for the audio
+  id: string;
   title?: string; // Title of the audio
   image_url?: string; // URL of the image associated with the audio
   image_large_url?: string;
@@ -85,17 +85,12 @@ class SunoApi {
     if (!this.sid) {
       throw new Error("Session ID is not set. Cannot renew token.");
     }
-    // URL to renew session token
     const renewUrl = `${SunoApi.CLERK_BASE_URL}/v1/client/sessions/${this.sid}/tokens?_clerk_js_version=4.72.0-snapshot.vc141245`;
-    // Renew session token
     const renewResponse = await this.client.post(renewUrl);
-    console.info("KeepAlive...\n");
     if (isWait) {
       await sleep(1, 2);
     }
     const newToken = renewResponse.data["jwt"];
-    // console.log("newToken:===\n\n", newToken);
-    // Update Authorization field in request header with the new JWT token
     this.currentToken = newToken;
   }
 

@@ -12,8 +12,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI Song",
-  description: "An ai music website developed based on Next.js and Suno AI.",
+  title: "AI Music Generator",
+  description:
+    "An AI music generator website developed based on Next.js and Suno AI.",
 };
 
 export default function RootLayout({
